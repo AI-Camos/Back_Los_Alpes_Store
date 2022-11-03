@@ -30,6 +30,8 @@ npm run dev
 ```
 ## POSTMAN
 
+La colleccion de pruebas para postman se adjunta en el repositorio, llamada `Prueba.postman_collection.json` solo se debe exportar a postman 
+
 ### GET ALL
 
 http://localhost:3000/api/v1/products
