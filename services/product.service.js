@@ -14,7 +14,6 @@ class ProductsService {
     const query =
       'INSERT INTO Products (name, description, price, image) VALUES ($1, $2, $3, $4)';
     const rta = await this.pool.query(query, values);
-    console.log(rta);
     const queryId= 'SELECT last_value FROM products_id_seq';
     const { rows } = await this.pool.query(queryId);
 
