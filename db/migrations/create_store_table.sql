@@ -1,0 +1,8 @@
+CREATE TABLE Products (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 225 ) NOT NULL,
+	description VARCHAR ( 225 ) NOT NULL,
+  price VARCHAR ( 225 ) NOT NULL,
+  image VARCHAR ( 225 ) NOT NULL,
+  createdAt TIMESTAMP DEFAULT LOCALTIMESTAMP
+);

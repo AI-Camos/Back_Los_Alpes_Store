@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  postgres:
+    build: ./db
+    environment:
+      - POSTGRES_DB=my_store
+      - POSTGRES_USER=Brandon
+      - POSTGRES_PASSWORD=admin123
+    ports:
+      - 5433:5432
+

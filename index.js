@@ -4,6 +4,8 @@ const routerApi = require('./routes');
 
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
+require('dotenv').config()
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -21,13 +23,6 @@ const options = {
 }
 app.use(cors(options));
 
-app.get('/', (req, res) => {
-  res.send('Hola mi server en express');
-});
-
-app.get('/nueva-ruta', (req, res) => {
-  res.send('Hola, soy una nueva ruta');
-});
 
 routerApi(app);
 
@@ -37,5 +32,5 @@ app.use(errorHandler);
 
 
 app.listen(port, () => {
-  console.log('Mi port' +  port);
+  console.log('Funciona el port ' +  port);
 });
