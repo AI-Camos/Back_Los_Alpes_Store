@@ -14,13 +14,14 @@ docker-compose up
 
 Este comando ejecutara el archivo docker-compose.yml, la cual contiene las credeciales para concetarse con la base de datos.
 Tambien es de notar que por temas de desarrollo y por tener el puerto 5432 ocupado, cambie el puerto a 5433.
-```yml
-environment:
-  - POSTGRES_DB=my_store
-  - POSTGRES_USER=Brandon
-  - POSTGRES_PASSWORD=admin123
- ports:
-  - 5433:5432
+Se debe crear un archivo .env con los siguientes datos.
+```.env
+DATABASE_HOST="localhost"
+DATABASE_PORT="5433"
+DATABASE_USER="Brandon"
+DATABASE_PASSWORD="admin123"
+DATABASE_NAME="my_store"
+
 ```
 
 Una vez ejecutado el contenedor, procedemos a ejecutar node.js con el siguiente comando
